@@ -1,0 +1,28 @@
+span {
+  font-size: 1.1em;
+}
+
+label {
+  font-size: large;
+}
+
+.input-field input:focus + label {
+  color: #4527a0 !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #4527a0 !important;
+  -webkit-box-shadow: 0 1px 0 0 #4527a0 !important;
+  box-shadow: 0 1px 0 0 #4527a0 !important;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.input-field textarea:focus + label {
+  color: #4527a0 !important;
+}
+
+input[type="radio"]:checked {
+  background-color: red !important;
+}
+/*# sourceMappingURL=style.css.map */
