@@ -6,8 +6,42 @@
     <title>Class Performance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- Compiled and minified JavaScript -->
+    <style>
+      span {
+        font-size: 1.1em;
+      }
+
+      label {
+        font-size: large;
+      }
+
+      .input-field input:focus + label {
+        color: #4527a0 !important;
+      }
+
+      .input-field input:focus {
+        border-bottom: 1px solid #4527a0 !important;
+        -webkit-box-shadow: 0 1px 0 0 #4527a0 !important;
+        box-shadow: 0 1px 0 0 #4527a0 !important;
+        background-color: #f7f7f7;
+        border-radius: 10px;
+      }
+
+      .input-field textarea:focus + label {
+        color: #4527a0 !important;
+      }
+
+      .btn {
+        color: #fff !important;
+        background-color: #4527a0 !important;
+        text-transform: none;
+        padding: 0 50px;
+        border-radius: 10px;
+        font-size: 1.2em;
+      }
+      /*# sourceMappingURL=style.css.map */
+    </style>
   </head>
   <body>
     <header>
@@ -65,6 +99,130 @@
                 <label for="department">Department name</label>
               </div>
             </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="batch" type="number" class="validate" placeholder="ex. 22" />
+                <label for="batch">Batch number</label>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">Spring</option>
+                  <option value="2">Summer</option>
+                  <option value="3">Fall</option>
+                </select>
+                <label>Semester number</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="section" type="text" class="validate" placeholder="ex. A, B" />
+                <label for="section">Section</label>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="grade_point" type="number" class="validate" placeholder="ex. 3.75" />
+                <label for="grade_point">Last semester grade point</label>
+              </div>
+            </div>
+          </div>
+          <span>Class Performance Information</span>
+          <div class="row">
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="advisor_meeting" type="number" class="validate" />
+                <label for="advisor_meeting">Number of meeting with advisor</label>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="group_study" type="number" class="validate" />
+                <label for="group_study">Group study hours</label>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="absenst_days" type="number" class="validate" />
+                <label for="absenst_days">Absent days</label>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <label for="gender">Parent satisfaction</label>
+              <p>
+                <label>
+                  <input name="group1" type="radio" checked />
+                  <span>Yes</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1" type="radio" />
+                  <span>No</span>
+                </label>
+              </p>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <input id="parents_education" type="text" class="validate" />
+                <label for="parents_education">Education of parents</label>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="input-field">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">High</option>
+                  <option value="2">Medium</option>
+                  <option value="2">Low</option>
+                </select>
+                <label>Level of class</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="input-field">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">High</option>
+                  <option value="2">Medium</option>
+                  <option value="2">Low</option>
+                </select>
+                <label>Question asking rate in classroom</label>
+              </div>
+            </div>
+
+            <div class="col s12 m6">
+              <div class="input-field">
+                <input id="grade_point" type="number" class="validate" placeholder="ex. 40" />
+                <label for="grade_point">Number of questions asked in classroom</label>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="input-field">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">High</option>
+                  <option value="2">Medium</option>
+                  <option value="2">Low</option>
+                </select>
+                <label>Going through course material</label>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="input-field">
+                <input id="grade_point" type="number" class="validate" placeholder="ex. 40" />
+                <label for="grade_point">Number of course material completed</label>
+              </div>
+            </div>
+          </div>
+          <div class="center">
+            <a class="waves-effect waves-light btn btn-large">Submit</a>
           </div>
         </form>
       </div>
@@ -78,6 +236,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("select").formSelect();
+      });
+    </script>
   </body>
 </html>
